@@ -20,6 +20,7 @@ onload -> Disparado quando a página terminou de ser carregada. Body.
 onresize -> Disparado quando há um redimencionamento da janela.
 
 */
+/*
 
 function eventoclick() {
     alert('Acionou um evento de click');
@@ -35,3 +36,35 @@ function viravermelho() {
     let div = document.getElementById("teste");
     div.style.backgroundColor = "red";
 } 
+
+function viraazul() {
+    let div = document.getElementById("teste");
+    div.style.backgroundColor = "blue";
+} 
+
+/*
+function adicionatexto() {
+    let p = document.getElementById("texto");
+    p.append('O mouse moveu <br>');
+}
+*/
+
+/*
+function limpatexto() {
+    document.getElementById("campotexto").value = "";
+} 
+*/
+
+function mudou() {
+    console.log("Mudou")
+} 
+
+function eventoclick() {
+    alert('Acionou um evento de click');
+    document.body.style.backgroundColor = "green";
+} 
+
+function teclapressionada() {
+    let input = document.getElementById("campotexto").value;
+    console.log(input);
+}
