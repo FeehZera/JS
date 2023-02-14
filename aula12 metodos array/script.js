@@ -36,8 +36,28 @@ pessoa.shift(); // todos os itens mudam sua casa/valor ou seja item 1 passa a se
 // colocar um item por primeiro na matriz
 pessoa.unshift("Bonitao") // assim como shift so que ao contrario ele umpurra para frente ou seja 0 passa aser 1, 1 vai para 2 assim sucesivamente
 
-// metodo delete, remove o conteudo da casa seleciona mas nao a apaga ou seja deixa ela indefinida / undefined
+// metodo delete, remove o conteudo da casa seleciona mas nao a apaga a casa ou seja deixa ela indefinida / undefined
 delete pessoa[0]; // nao e o melhor metodo de apagar um valor pois ele deixa a matriz com um burraco
 
 // metodo para adicionar multiplos valores dentro de uma casa do array
-pessoa.splice(1,0,"item adiciona 1", "item adiciona 2"); // 
+pessoa.splice(1,0,"item adiciona 1", "item adiciona 2"); // o primeiro valor "1" indica o local da casa a ser ocupado, o valor dois "0" indica quantos itens vao ser removidos para ele ser realocado, no caso aqui foram removidos "0" valores ou seja nenhum foi removido apenas foram adicionados itens, e o terceiro e os proximos itens sao os valores a ser adicionados
+
+// ele desloca as casas assim como unshift
+
+// metodo concat "FUSAO PARA SE TORNAR SUPER SAIYAJIN" ou somente transformar dois arrays em um kkk
+
+const lista1 = ["arroz", "feijao", "macarao", "leite"]; //array
+const lista2 = ["Suco", "refrigerante", "carne"];
+const lista3 = ["salgadinho"];
+
+const superlista = lista1.concat(lista2, lista3); //sempre tem que criar uma nova variavel nao pode juntar uma dentro da outro precisa de uma terceira lista para juntar as duas ou mais listas como no exemplo
+
+//document.getElementById("teste").innerHTML = superlista;
+
+//fatiar uma matriz
+
+const jogadores = ["Biro Biro", "Ribamar", "Pelé", "Maradona"];
+const craques = jogadores.slice(2); //pega apenas a casa selecionada e as posteriores a ela
+
+document.getElementById("teste").innerHTML = craques;
+console.log(craques);
