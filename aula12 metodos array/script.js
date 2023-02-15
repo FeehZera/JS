@@ -28,7 +28,7 @@ const pessoa = ["Dimitri", "Teixeira", 30, "Professor"]; //array
 pessoa.pop();
 
 // adicionar um item na final da matriz
-pessoa.puss("Qualquer coisa");
+pessoa.push("Qualquer coisa");
 
 // para remover o primeiro item da matriz
 pessoa.shift(); // todos os itens mudam sua casa/valor ou seja item 1 passa a ser 0 , o 2 passa a ser 1 assim sucesivamente, ou seja todos itens andam uma casa para traz
@@ -54,10 +54,57 @@ const superlista = lista1.concat(lista2, lista3); //sempre tem que criar uma nov
 
 //document.getElementById("teste").innerHTML = superlista;
 
-//fatiar uma matriz
+//fatiar uma matriz, slice
 
-const jogadores = ["Biro Biro", "Ribamar", "Pelé", "Maradona"];
-const craques = jogadores.slice(2); //pega apenas a casa selecionada e as posteriores a ela
+const jogadores = ["Biro Biro", "Ribamar", "Pelé", "Maradona", "Neymar", "Cristiano Ronaldo", "Vampeta", "Dimitri"];
+const craques = jogadores.slice(2, 6); //pega apenas a casa selecionada e as posteriores a ela se nao houver um limite pre selecionado, ex: o "2" é o inicio e o "6" é o limite
 
 document.getElementById("teste").innerHTML = craques;
-console.log(craques);
+
+//como deixar valores em ordem alfabetica
+const jogoordem = jogadores.sort();
+
+document.getElementById("teste").innerHTML = jogoordem;
+
+//ordem alfabetica ao contrario
+jogadores.sort(); //primeiro coloque em ordem alfabetica
+jogadores.reverse(); //depois coloque em reverse para ficar ao contrario ou seja inverso
+
+document.getElementById("teste").innerHTML = jogadores;
+
+//como colocar ordem crescente nos numeros 
+const numeros = [40, 100, 1, 5, 25, 10];
+
+numeros.sort() // sort serve apenas para strings, em numeros ele coloca em ordem mas so que na primeira casa decimal
+
+numeros.sort(function (a, b) {return a-b}); // hacking para deixar os numejros em ordem numerica crescente
+
+numeros.sort(function (a, b) {return b-a}); // hacking para deixar os numejros em ordem numerica descresente, apenas troque de posicao os parametros "a" e "b"
+
+document.getElementById("teste").innerHTML = numeros;
+
+//pegar o maior numero de uma matriz
+function maiornumero (array) {
+    return Math.max.apply(null, array);
+}
+
+document.getElementById("teste").innerHTML = maiornumero(numeros); //chamando a function
+
+//pegar o menor numero de uma matriz
+function menornumero (array) {
+    return Math.min.apply(null, array);
+}
+
+document.getElementById("teste").innerHTML = menornumero(numeros); //chamando a function
+
+// basta apenas trocar max por min nao function!!!
+
+//filtragem de matrizes
+const maior20 = numeros.filter(filtragem);
+
+function filtragem(value, index, array) {
+    return value > 20;
+}
+
+document.getElementById("teste").innerHTML = maior20;
+
