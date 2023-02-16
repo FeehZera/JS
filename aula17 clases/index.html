@@ -9,19 +9,27 @@
         body{
             text-align: center;
             background-color: darkslategrey;
-
+        }
+        .start{
+            width: 150px;
+            height: 75px;
+            background-color: green;
+        }
+        .stop{
+            width: 150px;
+            height: 75px;
+            background-color: red;
         }
     </style>
 </head>
 <body>
-    <h1>Aprendendo JS</h1>
+    <h1>Controle de Tempo</h1>
 
     <p id="teste"></p>
 
-    <select id="ano">
-        <option selected disabled>Selecione o ano</option>
-    </select>
-
+    <h2 id="tempo">10</h2>
+    <button onclick="start()" class="start">Start</button>
+    <button onclick="stop()" class="stop">Stop</button>
     <script src="script.js"></script>
 
 </body>
