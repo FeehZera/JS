@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>FLEXBOX</title>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                background-color: #ccc;
+            }
+            .container{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+            .child{
+                width: 50%;
+                height: 100px;
+                background-color: red;
+                border: 1px dashed black;
+                color: black;
+            }
+        </style>
+    </head>
+    
+    <body>
+    <div class="container">
+
+        <div style="order: 3;" class="child">1</div>
+        <div style="order: 1;" class="child">2</div>
+        <div style="order: 2;" class="child">3</div>
+        <div style="order: 0;" class="child">4</div>
+
+    </div>    
+    </body>
+
+</html>

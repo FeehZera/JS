@@ -79,7 +79,7 @@ alert(pessoa.length); //3
 // mostrar o ultimo item do array
 alert(pessoa[pessoa.length -1]);
 
-// como adicionar um item dentro da matriz
+// como adicionar um item dentro da matriz-------------------
 
 //push
 pessoa.push("Brasileiro"); // acresenta ao final

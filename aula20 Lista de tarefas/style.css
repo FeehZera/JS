@@ -43,13 +43,38 @@ input , button
 }
 input
 {
-    width: 400px;
+    width: 300px;
 }
 input:focus
 {
     outline: none;
 }
-button
-{
+#Adicionar{
     background-color: green;
+}
+#Remover{
+    background-color: red;
+}
+#HTML
+{
+    color: orangered;
+    font-size: 4em;
+}
+#CSS
+{
+    color: blue;
+    font-size: 4em;
+}
+#JS
+{
+    color: yellow;
+    font-size: 4em;
+}
+footer
+{
+    width: 201px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.497);
+    margin-left: calc(100% - 200px);
 }
