@@ -1,80 +1,95 @@
 @charset "UTF-8";
-:root{
-    --azul: #0001A3;
-    --marinho: #000057;
-}
-*
-{
-    padding: 0px;
-    border: 0px;
+
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-body
-{
+body{
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    min-height: 100vh;
-    background-image: linear-gradient(100deg, var(--marinho),var(--azul));
+    background: #ccc;
 }
-h1
-{
+h1{
     text-align: center;
-    color: white;
-    text-shadow: 1px 1px 1px black;
+    font-size: 3em;
 }
-#base
-{
-    width: 600px;
-    height: 600px;
-    margin: auto;
-    background-color: white;
+header{
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    /*border: 1px solid black;*/
+    margin: auto auto;
 }
-#base2
-{
-    text-align: center;
-    padding-top: 10px;
+input{
+    height: 120px;
+    font-size: 2em;
+    width: 80%;
+    padding-left: 10%;
 }
-input , button
-{
-    width: 100px;
-    height: 30px;
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid darkgrey;
-}
-input
-{
-    width: 300px;
-}
-input:focus
-{
-    outline: none;
-}
-#Adicionar{
+button.add{
+    width: 20%;
+    cursor: pointer;
     background-color: green;
+    color: white;
+    border: none;
+    height: 120px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
-#Remover{
-    background-color: red;
+main{
+    display: flex;
+    flex-flow: row wrap;
+    width: 90%;
+    margin: auto auto;
+   /*border: 1px solid black;*/
+    padding-top: 40px;
 }
-#HTML
-{
-    color: orangered;
-    font-size: 4em;
+.item{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    height: 80px;
+    width: 100%;
+    box-shadow: 0 0 20px #ccc;
+    margin-bottom: 2%;
+    cursor: pointer;
 }
-#CSS
-{
-    color: blue;
-    font-size: 4em;
+.item.clicado{
+    background: #d4f6d9;
 }
-#JS
-{
-    color: yellow;
-    font-size: 4em;
+.item.clicado .item-nome{
+    text-decoration: line-through;
+    color: gray;
 }
-footer
-{
-    width: 201px;
-    border-radius: 10px;
+.item-icone{
+    flex: 20%;
+    /*border: 1px solid black;*/
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.497);
-    margin-left: calc(100% - 200px);
+    font-size: 2em;
+}
+.item-nome{
+    flex: 55%;
+    /*border: 1px solid black;*/
+    font-size: 20px;
+    font-weight: bold;
+}
+.item-botao{
+    flex: 25%;
+    /*border: 1px solid black;*/
+}
+.delete{
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    cursor: pointer;
+}
+.mdi-checkbox-marked-circle{
+    color: green;
 }
